@@ -4,15 +4,13 @@ project(game LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
-target_link_libraries(mytarget PRIVATE Qt6::Widgets)
-
-find_package(Qt6 REQUIRED COMPONENTS Core)
-target_link_libraries(mytarget PRIVATE Qt6::Core)
-
 qt_standard_project_setup()
 
 qt_add_executable(game main.cpp Game.cpp)
+
+find_package(QString REQUIRED)
+find_package(QGraphicsItem REQUIRED)
+SET(QT_USE_QTDESIGNER ON)
 
 set_target_properties(game PROPERTIES
     WIN32_EXECUTABLE TRUE

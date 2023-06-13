@@ -62,7 +62,7 @@ void Game::start(){
 void Game::displayMainMenu(){
 
     // create title text
-    QGraphicsTextItem *titleText = new QGraphicsTextItem(QString("Space Invaders"));
+    QGraphicsTextItem *titleText = new QGraphicsTextItem(QString("Kitty Invaders"));
     QFont titleFont("comic sans", 50);
     titleText->setFont(titleFont);
     int xTitlePos = this->width()/2 - titleText->boundingRect().width()/2;

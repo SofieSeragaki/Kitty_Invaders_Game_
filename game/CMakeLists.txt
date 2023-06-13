@@ -10,6 +10,8 @@ qt_standard_project_setup()
 qt_add_executable(Kitty_Invaders_Game_
         Bullet.cpp
         Bullet.h
+        Button.cpp
+        Button.h
         Enemy.cpp
         Enemy.h
         Game.cpp

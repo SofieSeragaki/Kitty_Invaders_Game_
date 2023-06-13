@@ -1,22 +1,35 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.24.2)
+project(Kitty_Invaders_Game_)
 
-project(game LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets QString QGraphicsItem)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 qt_standard_project_setup()
 
-qt_add_executable(game main.cpp Game.cpp)
+qt_add_executable(Kitty_Invaders_Game_
+        Bullet.cpp
+        Bullet.h
+        Enemy.cpp
+        Enemy.h
+        Game.cpp
+        Game.h
+        Health.cpp
+        Health.h
+        main.cpp
+        Player.cpp
+        Player.h
+        Score.cpp
+        Score.h)
 
-set_target_properties(game PROPERTIES
-    WIN32_EXECUTABLE TRUE
-    MACOSX_BUNDLE TRUE
-)
+set_target_properties(Kitty_Invaders_Game_ PROPERTIES
+        WIN32_EXECUTABLE TRUE
+        MACOSX_BUNDLE TRUE
+        )
 
-target_link_libraries(game PRIVATE
-    Qt6::Core
-    Qt6::Gui
-    Qt6::Widgets
-    Qt6::QString
-    Qt6::QGraphicsItem
-)
+target_link_libraries(Kitty_Invaders_Game_ PRIVATE
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
+        
+        )

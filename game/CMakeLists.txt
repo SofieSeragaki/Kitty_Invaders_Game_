@@ -5,6 +5,10 @@ project(game LANGUAGES CXX)
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
+target_link_libraries(mytarget PRIVATE Qt6::Widgets)
+
+find_package(Qt6 REQUIRED COMPONENTS Core)
+target_link_libraries(mytarget PRIVATE Qt6::Core)
 
 qt_standard_project_setup()
 
